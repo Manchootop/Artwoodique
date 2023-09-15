@@ -33,14 +33,29 @@
             </ul>
         </nav>
     </header>
+    <div class="slider-container">
+        <div class="slider">
+            <ul>
+                <li>
+                    <span>Shop All New Arrivals</span>
+                    <div class="slider-cta">
+                        <p><a href="{% url 'shop' %}">Shop</a></p>
+                    </div>
+                </li>
+
+                <li>
+                    <span>Shop All New Arrivals</span>
+                    <div class="slider-cta">
+                        <p><a href="{% url 'shop' %}">Shop</a></p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- Repeat this structure for each new arrival -->
+    </div>
 
     <main>
 
-        <div class="header">
-            <h1>Gallery: Product № {{ product.id }}</h1>
-            <p>Order a <strong>similar</strong> table by contacting us and calling out the number on the
-                product's description</p>
-        </div>
 
         <!-- <a href="#" class="primary-cta"><---</a> -->
 
@@ -76,37 +91,45 @@
 
 
             <div class="details">
-<table>
-        <tr>
-            <td><strong>Price:</strong></td>
-            <td>USD {{ product.price|floatformat:2 }}</td>
-        </tr>
-        <!-- Add more rows for other details -->
-        <tr>
-            <td><strong>Description:</strong></td>
-            <td>{{ product.description }}</td>
-        </tr>
-        <tr>
-            <td><strong>Review:</strong></td>
-            <td>
-                <div class="star-rating">
-                    <!-- Add your star rating spans here -->
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td><strong>Material:</strong></td>
-            <td>{{ product.material }}</td>
-        </tr>
-        <tr>
-            <td><strong>Size:</strong></td>
-            <td>{{ product.size }}</td>
-        </tr>
-        <tr>
-            <td><strong>Num:</strong></td>
-            <td>{{ product.id }}</td>
-        </tr>
-    </table>
+                <span style="font-size: 1.4rem; color: red; margin-top: -1em; margin-bottom: 1em">Catalog</span>
+                <h2>{{ product.name }}</h2>
+                <span>{{ product.subheading }}</span>
+                <br>
+                <span>{{ product.price|floatformat:2 }}</span>
+                <p>{{ product.description }}</p>
+                <table>
+
+                    <!-- Add more rows for other details -->
+
+                    <tr>
+                        <td><strong>Review:</strong></td>
+                        <td>
+                            <div class="star-rating">
+                                <!-- Add your star rating spans here -->
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Material:</strong></td>
+                        <td>{{ product.material }}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Max-width:</strong></td>
+                        <td>150</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Max-height:</strong></td>
+                        <td>160</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Size:</strong></td>
+                        <td>{{ product.size }}</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Id:</strong></td>
+                        <td>{{ product.id }}</td>
+                    </tr>
+                </table>
 
                 <div class="cta-btns">
                     <a href="#" class="primary-cta">Phone us</a>

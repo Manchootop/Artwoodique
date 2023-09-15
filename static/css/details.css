@@ -96,6 +96,33 @@ main .header p {
     font-size: 1.6rem;
 }
 
+/*header of main*/
+.slider-container {
+    background: #efefef;
+}
+.slider {
+    display: flex;
+    justify-content: center;
+}
+
+.slider ul li {
+    list-style: none;
+    text-align: center;
+}
+
+.slider ul li span {
+    font-size: 2rem;
+}
+.slider ul li .slider-cta p a{
+    font-size: 1.4rem;
+    color: black;
+}
+
+
+
+
+
+
 
 .container {
     display: grid;
@@ -201,6 +228,8 @@ main .header p {
 table {
     width: 100%;
     border-collapse: collapse;
+    font-size: 1.8rem;
+
 }
 
 table, th, td {
@@ -283,7 +312,10 @@ th {
 }
 
 .details ul.note li {
-    font-size: 1.4rem
+    font-size: 1.4rem;
+    list-style: none;
+    line-height: 2rem;
+    margin-bottom: 1em;
 }
 
 /* microinteractions */

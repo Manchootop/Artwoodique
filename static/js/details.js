@@ -69,3 +69,9 @@ sidebarImages.forEach((image, index) => {
 
 // Initial update of the main image
 updateMainImage();
+
+
+// Add your JavaScript here
+
+
+
