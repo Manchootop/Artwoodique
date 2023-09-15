@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "artwoodique"
+version = "0.1.0"
+description = "Artwoodique shop"
+authors = ["Mariyan Georgiev <mariqn5000@gmail.com>"]
+license = "MIT"
+readme = "README.rst"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pillow = "^10.0.1"
+django-filter = "^23.2"
+django-ckeditor = "^6.7.0"
+django = "^4.2.5"
+psycopg2 = "^2.9.7"
+asgiref = "3.7.2"
+django-admin-hstore-widget = "1.2.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

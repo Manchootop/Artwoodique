@@ -6,10 +6,9 @@ from django.views import generic as views
 from django.core.paginator import Paginator
 
 from core.filters import ProductFilter
-from core.models import Product, ProductImage, ProductRating, Sale
 from project import settings
 from .forms import NewsletterSignupForm
-from .models import Subscriber
+from .models.shop_models import Product, ProductImage, ProductRating, Sale, Subscriber
 
 
 class HomeView(views.TemplateView):
