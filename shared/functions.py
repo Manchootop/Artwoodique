@@ -3,7 +3,7 @@ import os
 from PIL import Image, ImageChops
 
 # Delete default image of object
-from project.settings import BASE_DIR
+from core.project.settings import BASE_DIR
 
 
 def delete_main_photo(model, pk):

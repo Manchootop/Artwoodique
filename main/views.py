@@ -1,12 +1,10 @@
 from django.contrib import messages
 from django.core.mail import send_mail
 from django.db.models import Avg
-from django.shortcuts import render
 from django.views import generic as views
-from django.core.paginator import Paginator
 
-from core.filters import ProductFilter
-from project import settings
+from core.project import settings
+from main.filters import ProductFilter
 from .forms import NewsletterSignupForm
 from .models.shop_models import Product, ProductImage, ProductRating, Sale, Subscriber
 
