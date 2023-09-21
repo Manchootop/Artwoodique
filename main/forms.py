@@ -7,4 +7,6 @@ class NewsletterSignupForm(forms.Form):
         widget=forms.TextInput(attrs={'placeholder': 'email'})
     )
     name = forms.CharField(
-                    widget=forms.TextInput(attrs={'placeholder': 'name'}))
+        widget=forms.TextInput(attrs={'placeholder': 'name'}
+                               )
+    )
