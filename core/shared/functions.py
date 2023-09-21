@@ -12,7 +12,7 @@ def delete_main_photo(model, pk):
         try:
             default_image_url = model.objects.get(id=pk).image.url
             os.remove(str(BASE_DIR) + default_image_url)
-        except:
+        except:  # noqa: E722
             pass
 
 
@@ -23,7 +23,7 @@ def delete_all_photos(model, object_pk):
         for item in images_of_cpu:
             try:
                 os.remove(str(BASE_DIR) + item.image.url)
-            except:
+            except:  # noqa E722
                 pass
             item.delete()
 

@@ -8,4 +8,3 @@ def yaml_coerce(value):
         return yaml.load(f'dummy: {value}', Loader=yaml.SafeLoader)["dummy"]
 
     return value
-

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from main.models.shop_models import Product, ProductImage, ProductRating, Sale, Subscriber
+from core.main.models.shop_models import Product, ProductImage, ProductRating, Sale, Subscriber
 
 
 @admin.register(Product)

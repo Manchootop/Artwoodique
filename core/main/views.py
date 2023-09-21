@@ -4,7 +4,7 @@ from django.db.models import Avg
 from django.views import generic as views
 
 from core.project import settings
-from main.filters import ProductFilter
+from core.main.filters import ProductFilter
 from .forms import NewsletterSignupForm
 from .models.shop_models import Product, ProductImage, ProductRating, Sale, Subscriber
 

@@ -1,11 +1,10 @@
 from django.contrib.auth.models import User
 from django.core.validators import MinValueValidator, MaxValueValidator
 from django.db import models
-from ckeditor.fields import RichTextField
 from django.utils import timezone
 
-from shared.functions import upload_other_images_product_url
-from shared.models import TimeBaseModel
+from core.shared.functions import upload_other_images_product_url
+from core.shared.models import TimeBaseModel
 
 
 def upload_image_product_url(instance, filename):

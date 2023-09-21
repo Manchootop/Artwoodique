@@ -1,5 +1,5 @@
 from core.project.settings import BASE_DIR
-#TODO
+# TODO
 
 DEBUG = False
 SECRET_KEY = NotImplemented
@@ -16,8 +16,10 @@ INSTALLED_APPS = [
     # Third-party apps
     'ckeditor',
     # 'django_admin_hstore_widget',
+
     # Project apps
-    'main',
+    'core.main',
+    'core.accounts',
 ]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -33,8 +35,7 @@ ROOT_URLCONF = 'core.project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
-        ,
+        'DIRS': [BASE_DIR / 'core/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -90,7 +91,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
+    BASE_DIR / "core/static",
 ]
 MEDIA_ROOT = BASE_DIR / 'mediafiles'
 MEDIA_URL = '/media/'

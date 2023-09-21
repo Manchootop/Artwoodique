@@ -1,7 +1,6 @@
 from django.urls import path
-from django.views.generic import ListView
 
-from main import views
+from core.main import views
 
 urlpatterns = [
     path('', views.HomeView.as_view(), name='index'),
