@@ -118,13 +118,13 @@ class ProductDetailsView(views.DetailView):
         context['average_rating'] = ProductRating.objects.filter(product=self.object).aggregate(Avg('rating'))[
             'rating__avg']
 
-        try:
-            sale = Sale.objects.get(product=self.object)
-            context['sale_percentage'] = sale.sale_percentage
-            context['sale_expiry_date'] = sale.sale_date
-        except Sale.DoesNotExist:
-            context['sale_percentage'] = None
-            context['sale_expiry_date'] = None
+        # try:
+        #     sale = Sale.objects.get(product=self.object)
+        #     context['sale_percentage'] = sale.sale_percentage
+        #     context['sale_expiry_date'] = sale.sale_date
+        # except Sale.DoesNotExist:
+        #     context['sale_percentage'] = None
+        #     context['sale_expiry_date'] = None
 
         return context
 
