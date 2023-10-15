@@ -1,3 +1,1 @@
-python-3.11.6
-https://github.com/heroku/heroku-buildpack-python.git
-https://github.com/moneymeets/python-poetry-buildpack.git
+heroku config:set PYTHON_RUNTIME_VERSION=3.9.1
