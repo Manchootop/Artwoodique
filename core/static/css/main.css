@@ -387,7 +387,7 @@ nav ul li a:hover:before {
 }
 
 .what_do_you_get {
-    background-color: #F1E2D1;
+    background-color: var(--main-bg-color-light);
     max-width: 4300px;
     margin: 0 auto;
     padding: 8em 0;
@@ -453,7 +453,7 @@ h2 {
     align-content: center;
     background-color: white;
     font-weight: bold;
-    gap: 1em;
+    gap: .8em;
 }
 
 #order-now img {
@@ -820,9 +820,10 @@ h4 {
     .why-choose-us {
         padding: 3em;
         margin: 2em;
-
     }
+}
 
+@media (max-width: 775px) {
     .why-choose-us ul {
         list-style: none;
         padding: 0;
@@ -860,6 +861,25 @@ h4 {
         height: 100%;
         top: -70px;
         left: -50px;
+    }
+
+    .left-col {
+        margin-right: 0;
+        align-self: center;
+        width: 80%;
+    }
+    .right-col {
+        height: 100%;
+        margin: 0 3em 3em 3em;
+        padding: 0 3em 3em 3em;
+    }
+    .card {
+        height: 100%;
+        margin: 8em 0;
+        padding: 2em;
+    }
+    .card img {
+        background-size: cover;
     }
 }
 

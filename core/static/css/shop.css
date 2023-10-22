@@ -6,6 +6,13 @@ html {
     box-sizing: border-box;
 }
 
+:root {
+    --main-bg-color-light: #bfa271;
+    --main-bg-color-dark: #583d22;
+
+    --header-font: 'Playfair Display SC';
+    --main-font: 'Poppins';
+}
 
 body {
     margin: 0;
@@ -81,6 +88,15 @@ nav ul li a:before {
 
 /* Hero Section */
 
+.page-description {
+    background: var(--main-bg-color-light);
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+
 main {
     display: grid;
     grid-template-columns: 1fr 4fr;
@@ -93,7 +109,7 @@ main {
     align-items: start;
 }
 
-main>* {
+main > * {
     /* border: 1px solid black; */
 }
 
@@ -258,7 +274,6 @@ h1 {
 }
 
 
-
 .card-details {
     display: flex;
     justify-content: space-between;
@@ -296,9 +311,6 @@ p.product-price {
 }
 
 
-
-
-
 /* Microinteractions */
 nav ul li a:hover:before {
     width: 35%;
@@ -330,6 +342,7 @@ nav ul li a:hover:before {
         margin: 0 3em;
         /* Adjust the margin as per your preference */
     }
+
 }
 
 @media (max-width: 800px) {
