@@ -4,7 +4,7 @@ from core.project.settings import BASE_DIR
 DEBUG = False
 SECRET_KEY = NotImplemented
 
-ALLOWED_HOSTS = ['https://artwoodique-e3d4a925cb5c.herokuapp.com/', '127.0.0.1']
+ALLOWED_HOSTS = ['https://artwoodique-e3d4a925cb5c.herokuapp.com/', '127.0.0.1', 'localhost:8000']
 
 INSTALLED_APPS = [
     'django.contrib.admin',

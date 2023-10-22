@@ -120,3 +120,17 @@
 		}
   };
 })();
+
+
+ $(document).ready(function () {
+    var socialIcons = $('.social-icons');
+    var socialIconsOffset = socialIcons.offset().top;
+
+    $(window).scroll(function () {
+      if ($(window).scrollTop() > socialIconsOffset) {
+        socialIcons.addClass('fixed');
+      } else {
+        socialIcons.removeClass('fixed');
+      }
+    });
+  });

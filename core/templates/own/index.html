@@ -10,18 +10,49 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-            href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&family=Poppins:wght@200;300;400;700&display=swap"
-            rel="stylesheet">
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&family=Poppins:wght@200;300;400;700&display=swap"
+        rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.5.2/dist/js/bootstrap.min.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.min.js"></script>
+
 
 </head>
 
 <body>
 
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+        var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/65341679a84dd54dc4839eee/1hd9nfirh';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+    })();
+</script>
+<!--End of Tawk.to Script-->
 <div class="wrapper">
+    <div class="social-icons">
+        <ul>
+            <li><a href="#"><i class="fab fa-facebook-f fa-2x" style="color: var(--main-bg-color-dark)"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter fa-2x" style="color: var(--main-bg-color-dark)"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram fa-2x" style="color: var(--main-bg-color-dark)"></i></a></li>
+
+            <!-- Add more social icons as needed -->
+        </ul>
+    </div>
+
     <header>
-        <a href="{% url 'index' %}" class="logo">Artwoodique</a>
+        <a href="{% url 'index' %}" class="logo"><img src="{% static 'images/AW-logo-resized.png' %}" alt=""></a>
         <nav>
             <ul>
                 <li><a href="{% url 'index' %}" class="active">HOME</a></li>
@@ -83,8 +114,8 @@
                     <span>Contact us</span>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 9" fill="none">
                         <path
-                                d="M23.3536 4.85355C23.5488 4.65829 23.5488 4.34171 23.3536 4.14645L20.1716 0.964466C19.9763 0.769204 19.6597 0.769204 19.4645 0.964466C19.2692 1.15973 19.2692 1.47631 19.4645 1.67157L22.2929 4.5L19.4645 7.32843C19.2692 7.52369 19.2692 7.84027 19.4645 8.03553C19.6597 8.2308 19.9763 8.2308 20.1716 8.03553L23.3536 4.85355ZM0 5H23V4H0V5Z"
-                                fill="black"/>
+                            d="M23.3536 4.85355C23.5488 4.65829 23.5488 4.34171 23.3536 4.14645L20.1716 0.964466C19.9763 0.769204 19.6597 0.769204 19.4645 0.964466C19.2692 1.15973 19.2692 1.47631 19.4645 1.67157L22.2929 4.5L19.4645 7.32843C19.2692 7.52369 19.2692 7.84027 19.4645 8.03553C19.6597 8.2308 19.9763 8.2308 20.1716 8.03553L23.3536 4.85355ZM0 5H23V4H0V5Z"
+                            fill="black"/>
                     </svg>
                 </a>
             </div>
@@ -105,27 +136,27 @@
             <div class="card card0">
                 <div class="card-details">
                     <div>
-                        <a href="#" class="product-title">Oak Table</a>
-                        <p>Compact</p>
+                        <a href="#" class="product-title">Coffee Table</a>
+                        <p>Cross-cut</p>
                     </div>
-                    <p class="product-price">$459</p>
+                    <p class="product-price">$227</p>
                 </div>
             </div>
             <div class="card card1">
                 <div class="card-details">
                     <div>
-                        <a href="#" class="product-title">Oak Table</a>
-                        <p>Compact</p>
+                        <a href="#" class="product-title">Dinner Table</a>
+                        <p>Cross-cut</p>
                     </div>
-                    <p class="product-price">$459</p>
+                    <p class="product-price">$282</p>
                 </div>
             </div>
 
             <div class="card card2">
                 <div class="card-details">
                     <div>
-                        <a href="#" class="product-title">Oak Table</a>
-                        <p>Compact</p>
+                        <a href="#" class="product-title">Coffee Table</a>
+                        <p>Rip-cut</p>
                     </div>
                     <p class="product-price">$459</p>
                 </div>
@@ -134,8 +165,8 @@
             <div class="card card3">
                 <div class="card-details">
                     <div>
-                        <a href="#" class="product-title">Oak Table</a>
-                        <p>Compact</p>
+                        <a href="#" class="product-title">Coffee Table</a>
+                        <p>Slabbed</p>
                     </div>
                     <p class="product-price">$459</p>
                 </div>
@@ -175,8 +206,8 @@
 
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 9" fill="none">
                 <path
-                        d="M23.3536 4.85355C23.5488 4.65829 23.5488 4.34171 23.3536 4.14645L20.1716 0.964466C19.9763 0.769204 19.6597 0.769204 19.4645 0.964466C19.2692 1.15973 19.2692 1.47631 19.4645 1.67157L22.2929 4.5L19.4645 7.32843C19.2692 7.52369 19.2692 7.84027 19.4645 8.03553C19.6597 8.2308 19.9763 8.2308 20.1716 8.03553L23.3536 4.85355ZM0 5H23V4H0V5Z"
-                        fill="black"/>
+                    d="M23.3536 4.85355C23.5488 4.65829 23.5488 4.34171 23.3536 4.14645L20.1716 0.964466C19.9763 0.769204 19.6597 0.769204 19.4645 0.964466C19.2692 1.15973 19.2692 1.47631 19.4645 1.67157L22.2929 4.5L19.4645 7.32843C19.2692 7.52369 19.2692 7.84027 19.4645 8.03553C19.6597 8.2308 19.9763 8.2308 20.1716 8.03553L23.3536 4.85355ZM0 5H23V4H0V5Z"
+                    fill="black"/>
             </svg>
         </a>
 
@@ -212,13 +243,12 @@
         </ul>
 </div>
 
-<div class="background">
     <div class="container">
         <section class="products-services background">
-            <h2>Our Products and Services</h2>
+            <h2>Products and Services</h2>
             <div class="product">
                 <div class="product-image">
-                    <img src="{% static 'images/table4.png' %}" alt="Product 1">
+                    <img src="{% static 'images/table_for_p&s_section.jpg' %}" alt="Product 1">
                 </div>
                 <div class="product-description">
                     <h3>Choose a table that has been already created</h3>
@@ -230,7 +260,7 @@
             </div>
             <div class="product">
                 <div class="product-image">
-                    <img src="{% static 'images/table4.png' %}" alt="Product 2">
+                    <img src="{% static 'images/sideways-table_for_p&s_section.jpg' %}" alt="Product 2">
                 </div>
                 <div class="product-description">
                     <h3>Choose from Our Catalog and Contact Us</h3>
@@ -244,7 +274,6 @@
             <!-- Add more products/services here -->
         </section>
     </div>
-</div>
 
 
 <div class="container">
@@ -316,7 +345,7 @@
         border: 1px solid transparent;
         font-size: 1.4rem;
         width: 100%;
-        margin:-2em auto;
+        margin: -2em auto;
     }
 
     /* Individual messages */
@@ -381,29 +410,29 @@
 
 <script>
     // Get all close buttons by class name
-var closeButtons = document.getElementsByClassName('close');
+    var closeButtons = document.getElementsByClassName('close');
 
-// Add click event listeners to close buttons
-document.addEventListener('DOMContentLoaded', function () {
-    var closeButtons = document.querySelectorAll('.close');
+    // Add click event listeners to close buttons
+    document.addEventListener('DOMContentLoaded', function () {
+        var closeButtons = document.querySelectorAll('.close');
 
-    closeButtons.forEach(function (button) {
-        button.addEventListener('click', function () {
-            var message = this.parentElement;
-            if (message.style.display === 'none' || message.style.display === '') {
-                message.style.display = 'flex';
-            } else {
-                message.style.display = 'none';
-            }
+        closeButtons.forEach(function (button) {
+            button.addEventListener('click', function () {
+                var message = this.parentElement;
+                if (message.style.display === 'none' || message.style.display === '') {
+                    message.style.display = 'flex';
+                } else {
+                    message.style.display = 'none';
+                }
+            });
+        });
+
+        // Show messages with class 'alert' by setting display to 'flex'
+        var alertMessages = document.querySelectorAll('.custom-message .alert');
+        alertMessages.forEach(function (message) {
+            message.style.display = 'flex';
         });
     });
-
-    // Show messages with class 'alert' by setting display to 'flex'
-    var alertMessages = document.querySelectorAll('.custom-message .alert');
-    alertMessages.forEach(function (message) {
-        message.style.display = 'flex';
-    });
-});
 </script>
 
 </body>

@@ -6,6 +6,13 @@ html {
     box-sizing: border-box;
 }
 
+:root {
+    --main-bg-color-light: #bfa271;
+    --main-bg-color-dark: #583d22;
+
+    --header-font: 'Playfair Display SC';
+    --main-font: 'Poppins';
+}
 
 body {
     margin: 0;
@@ -22,30 +29,29 @@ body {
     color: #333;
 }
 
-
 .message {
     list-style: none;
-	border-radius: 10px;
-	box-shadow: 3px 3px 4px 0px rgba(50, 50, 50, 0.75);
-	color: white;
-	margin-bottom: 20px;
-	margin-left: auto;
-	margin-right: auto;
-	padding-bottom: 5px;
-	padding-top: 5px;
-	text-align: center;
-	width: 80%;
+    border-radius: 10px;
+    box-shadow: 3px 3px 4px 0px rgba(50, 50, 50, 0.75);
+    color: white;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    text-align: center;
+    width: 80%;
 }
 
 /*
  * Give the various message types the correct colors
  */
 .message.success {
-	background-color: green;
+    background-color: green;
 }
 
 .message.error {
-	background-color: red;
+    background-color: red;
 }
 
 .success {
@@ -83,6 +89,38 @@ body {
     max-width: 1300px;
     margin: 0 auto;
 }
+
+.social-icons {
+    position: fixed;
+    top: 50%;
+    left: 20px; /* Adjust as needed */
+    z-index: 1000;
+}
+
+.social-icons ul {
+    list-style: none;
+    padding: 0;
+}
+
+.social-icons li {
+    margin-bottom: 20px; /* Adjust as needed */
+}
+
+.animated {
+    transition: transform 0.3s ease-in-out;
+}
+
+.animated:hover {
+    transform: scale(1.2); /* Larger size on hover */
+}
+
+
+.social-icons.fixed {
+    position: fixed;
+    top: 20px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+}
+
 
 /* Navbar */
 
@@ -123,6 +161,7 @@ nav ul li a.active:before {
     border-bottom: 2px solid black;
     bottom: -6px;
 }
+
 /* for microinteraction */
 
 nav ul li a:before {
@@ -154,7 +193,7 @@ main {
 
 h1 {
     font-size: 5.2rem;
-    font-family: 'Playfair Display SC';
+    font-family: 'Playfair Display SC', sans-serif;
     font-weight: normal;
     margin: 0;
 }
@@ -336,9 +375,10 @@ nav ul li a:hover:before {
 .secondary-cta:hover {
     text-decoration: underline;
 }
+
 /* TODO Fix % when fix cards images */
 .card:hover {
-    transform:scale(1.1);
+    transform: scale(1.1);
     cursor: pointer;
 }
 
@@ -350,6 +390,7 @@ nav ul li a:hover:before {
     background-color: #F1E2D1;
     max-width: 4300px;
     margin: 0 auto;
+    padding: 8em 0;
 }
 
 .what-you-get {
@@ -389,7 +430,7 @@ h2 {
     top: 1px;
 }
 
-.benefit:hover{
+.benefit:hover {
     background: #E2D1BD;
 }
 
@@ -420,7 +461,7 @@ h2 {
     height: 2.4em;
 }
 
-#order-now:hover{
+#order-now:hover {
     background-color: rgb(255, 232, 232);
     font-weight: bold;
 
@@ -491,7 +532,6 @@ h3 {
 }
 
 
-
 /* styles.css */
 
 /* Container styling */
@@ -504,6 +544,7 @@ footer {
     align-items: center;
     background-color: white;
     padding: 20px;
+
 }
 
 /* Left column styling */
@@ -573,7 +614,9 @@ footer .left-col {
     padding: 1em 7em 7em 7em;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     margin: 8em;
+
 }
+
 
 .why-choose-us h2 {
     font-size: 3rem;
@@ -607,6 +650,8 @@ footer .left-col {
 
 .products-services {
     margin: 4em 0;
+    font-family: var(--header-font);
+
 }
 
 .products-services h2 {
@@ -618,19 +663,18 @@ footer .left-col {
     display: flex;
     align-items: center;
     text-align: center;
-    margin-bottom: 4em;
     padding-bottom: 4em;
 }
 
 .product-image {
     flex: 1;
-    margin-right: 20px;
 }
 
 .product-image img {
     width: 250px;
     height: 300px;
-    background-size: cover;
+    background-size: 100%;
+    border-radius: 0.8em;
 }
 
 .product-description {
@@ -661,9 +705,10 @@ footer .left-col {
 }
 
 .background {
-    background-color: #E2D1BD;
+    background-color: var(--main-bg-color-light);
     margin: 5em 0;
 }
+
 
 .section {
     margin: 8em 0;
@@ -756,11 +801,12 @@ h4 {
     font-size: 1.4rem;
     margin-top: 4em;
 }
+
 /* Add your existing CSS styles here */
 
 /* Style the mobile menu container */
 
-@media (max-width: 450px){
+@media (max-width: 450px) {
     main {
         flex-direction: column;
         margin: 20px;
@@ -769,12 +815,14 @@ h4 {
 
 }
 
+
 @media (max-width: 615px) {
     .why-choose-us {
         padding: 3em;
         margin: 2em;
 
     }
+
     .why-choose-us ul {
         list-style: none;
         padding: 0;
@@ -813,4 +861,10 @@ h4 {
         top: -70px;
         left: -50px;
     }
+}
+
+.why-choose-us, footer {
+    background-image: url("https://www.xlab.design/wp-content/uploads/2019/05/xlab-pattern.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
