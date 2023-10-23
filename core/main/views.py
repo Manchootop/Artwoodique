@@ -10,7 +10,7 @@ from .models.shop_models import Product, ProductImage, ProductRating, Sale, Subs
 
 
 class HomeView(views.TemplateView):
-    template_name = 'own/index.html'
+    template_name = 'index.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -45,7 +45,7 @@ class HomeView(views.TemplateView):
 
 class CollectionView(views.ListView):
     model = Product
-    template_name = 'own/shop.html'
+    template_name = 'shop.html'
     context_object_name = 'products'
     paginate_by = 9
 
@@ -78,7 +78,7 @@ class CollectionView(views.ListView):
 
 class CatalogView(views.ListView):
     model = Product
-    template_name = 'own/catalog.html'
+    template_name = 'catalog.html'
     context_object_name = 'products'
 
     def get_queryset(self):
@@ -109,7 +109,7 @@ class CatalogView(views.ListView):
 
 class ProductDetailsView(views.DetailView):
     model = Product
-    template_name = 'own/details.html'
+    template_name = 'details.html'
     context_object_name = 'product'
 
     def get_context_data(self, **kwargs):

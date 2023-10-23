@@ -11,7 +11,7 @@
     <link
             href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&family=Poppins:wght@200;300;400;700&display=swap"
             rel="stylesheet">
-
+    <script src="{% static 'js/shop.js' %}"></script>
 </head>
 
 <body>
@@ -35,20 +35,26 @@
     </header>
 
     <!-- main section -->
-    <section
-            class="page-description">
-        <h1>Store</h1>
-        <p style="text-align: center; font-size: 2rem; font-weight: 300">Shop our exclusive furniture collection at our
-            store.</p>
-        <img src="{% static 'images/smartphone.png' %}" style="width: 60px; height: 60px" alt="">
-    </section>
+    <nav class="breadcrumbs" style="">
+        <ul>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li><span>/</span></li>
+            <li><a href="{% url 'shop' %}">Shop</a></li>
+            <li><span>/</span></li>
+            <li><a href="{% url 'catalog' %}">Catalog</a></li>
+            <li><span>/</span></li>
+            <li style="font-size: 2rem">STORE</li>
+        </ul>
+    </nav>
+
+
     <main>
         <div class="left-col">
             <aside class="filter-sidebar">
                 <h2>Filter Options</h2>
 
                 <!-- Material Filter -->
-                <form method="get">
+                <form meod="get">
                     {{ filter.form.material.label_tag }}
                     {{ filter.form.material }}
 

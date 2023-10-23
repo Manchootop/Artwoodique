@@ -180,7 +180,7 @@ main {
     display: flex;
     flex-wrap: nowrap;
     gap: 8em;
-    margin: 11em 0;
+    margin: 0 0 10em 0;
 }
 
 .left-col {
@@ -613,7 +613,7 @@ footer .left-col {
     background-color: #fff;
     padding: 1em 7em 7em 7em;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    margin: 8em;
+    margin: 15em 10em;
 
 }
 
@@ -657,6 +657,7 @@ footer .left-col {
 .products-services h2 {
     text-align: center;
     font-size: 4rem;
+    padding: 1em 0 0 0;
 }
 
 .product {
