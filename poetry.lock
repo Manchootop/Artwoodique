@@ -130,16 +130,6 @@ testing = ["covdefaults (>=2.3)", "coverage (>=7.3)", "diff-cover (>=7.7)", "pyt
 typing = ["typing-extensions (>=4.7.1)"]
 
 [[package]]
-name = "find"
-version = "2020.12.3"
-description = "find files and dirs"
-optional = false
-python-versions = "*"
-files = [
-    {file = "find-2020.12.3.tar.gz", hash = "sha256:7dadadb63e13de019463f13d83e0e0567a963cad99a568d0f0001ac1104d8210"},
-]
-
-[[package]]
 name = "flake8"
 version = "6.1.0"
 description = "the modular source code checker: pep8 pyflakes and co"
@@ -506,4 +496,4 @@ brotli = ["Brotli"]
 [metadata]
 lock-version = "2.0"
 python-versions = "3.11.4"
-content-hash = "cee26c23655f0193732983cbe45a691e60b4e04e4119237ac25d0121e2a879a8"
+content-hash = "b34402f996d29e2457fc2ad13801378aaddceb3c5a628a4b6065ae253f4a3a52"
