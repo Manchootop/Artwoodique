@@ -139,16 +139,17 @@
                                 <p>Phone: +359 878 130 052 </p>
                                 <p>Email: artwoodique@gmail.com</p>
                                 <em>Table details:</em>
-                                <div class="popup-table-details" style="display: flex; flex-direction: column; justify-content: space-between; align-items: center">
-                                <div class="popup-table-text-details" style="display: flex; gap: 1em">
+                                <div class="popup-table-details"
+                                     style="display: flex; flex-direction: column; justify-content: space-between; align-items: center">
+                                    <div class="popup-table-text-details" style="display: flex; gap: 1em">
                                         <p>{{ product.title }}</p>
-                                <p><strong>id:</strong> {{ product.id }}</p>
-                                <p><strong>material:</strong> {{ product.material }}</p>
-                                </div>
-                                <p><img src="{{ product.image.url }}"
-                                        style="background-repeat: no-repeat; background-position: center; max-height: 200px"
-                                        alt="table_img">
-                                </p>
+                                        <p><strong>id:</strong> {{ product.id }}</p>
+                                        <p><strong>material:</strong> {{ product.material }}</p>
+                                    </div>
+                                    <p><img src="{{ product.image.url }}"
+                                            style="background-repeat: no-repeat; background-position: center; max-height: 200px"
+                                            alt="table_img">
+                                    </p>
                                 </div>
                             </address>
                             <p style="margin-top: -50px">We look forward to hearing from you!</p>
@@ -233,6 +234,7 @@
             max-width: 80%;
             text-align: center;
         }
+
         .popup-content h2 {
             margin-bottom: -100px;
         }
@@ -250,27 +252,29 @@
         }
 
         .left-arrow {
-    position: absolute;
-    left: 0;
-    top: 50%; /* Vertically center the arrow */
-    transform: translateY(-50%);
-}
+            position: absolute;
+            left: 0;
+            top: 50%; /* Vertically center the arrow */
+            transform: translateY(-50%);
+        }
 
-.right-arrow {
-    position: absolute;
-    right: 0;
-    top: 50%; /* Vertically center the arrow */
-    transform: translateY(-50%);
-}
-.up-row {
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    position: relative;
-}
-.up-row img {
-    max-width: 100%; /* Ensure the image doesn't overflow the container */
-}
+        .right-arrow {
+            position: absolute;
+            right: 0;
+            top: 50%; /* Vertically center the arrow */
+            transform: translateY(-50%);
+        }
+
+        .up-row {
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            position: relative;
+        }
+
+        .up-row img {
+            max-width: 100%; /* Ensure the image doesn't overflow the container */
+        }
 
 
     </style>

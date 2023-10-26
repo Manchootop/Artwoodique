@@ -6,10 +6,17 @@ html {
     box-sizing: border-box;
 }
 
+:root {
+    --main-bg-color-light: #bfa271;
+    --main-bg-color-dark: #583d22;
+
+    --header-font: 'Playfair Display SC';
+    --main-font: 'Poppins';
+}
 
 body {
     margin: 0;
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif;
     background-image: url('https://www.xlab.design/wp-content/uploads/2019/05/xlab-pattern.jpg');
 }
 
@@ -79,28 +86,16 @@ nav ul li a:before {
     transition: width .3s;
 }
 
+/* Hero Section */
+
 .page-description {
-    background-color: #F1E2D1;
-    padding: 4rem;
+    background: var(--main-bg-color-light);
+    padding: 2em;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center
 }
-
-.page-description p {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 300;
-}
-
-.page-description img {
-    width: 60px;
-    height: 60px;
-
-}
-
-/* Hero Section */
 
 main {
     display: grid;
@@ -110,11 +105,11 @@ main {
         "aside main"
         "aside main";
     gap: 4em;
-    margin: 11em 0;
+    margin: 2em 0 11em 0;
     align-items: start;
 }
 
-main>* {
+main > * {
     /* border: 1px solid black; */
 }
 
@@ -257,27 +252,33 @@ h1 {
 
 .cards {
     display: grid;
-    grid-template-columns: 300px 300px 300px;
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 1fr;
     gap: 0em 4em;
     /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
-    margin-right: 1em;
 
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0 0 2em 0;
 }
+
+.card {
+    max-height: 450px;
+    margin-bottom: 3em;
+}
+
 
 .card img {
     object-fit: cover;
     background-origin: border-box;
+    min-height: 350px;
+
     width: 100%;
     /* Ensure the image takes the full width of the container */
     height: 60%;
     /* Ensure the image takes the full height of the container */
     border-radius: .8em;
 }
-
 
 
 .card-details {
@@ -317,9 +318,6 @@ p.product-price {
 }
 
 
-
-
-
 /* Microinteractions */
 nav ul li a:hover:before {
     width: 35%;
@@ -351,6 +349,7 @@ nav ul li a:hover:before {
         margin: 0 3em;
         /* Adjust the margin as per your preference */
     }
+
 }
 
 @media (max-width: 800px) {
@@ -368,8 +367,8 @@ nav ul li a:hover:before {
 
 
 .filter-sidebar {
-    background-color: #f0f0f0;
-    padding: 3em; /* Convert 30px to 3em */
+    background: linear-gradient(90deg, rgba(191, 162, 113, 0.7), rgba(191, 162, 113, 0.7));
+    padding: 3em;
     border: 1px solid #ddd;
     border-radius: 0.5em; /* Convert 5px to 0.5em */
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.1); /* Convert 10px to 1em */
@@ -419,6 +418,7 @@ li {
 
 aside {
     position: sticky;
+    background-color: var(--main-bg-color-light);
 }
 
 .pagination {
@@ -468,6 +468,7 @@ aside {
 
     .card {
         margin: 0 auto;
+
     }
 
     .left-col {
@@ -485,6 +486,7 @@ aside {
         list-style: none;
         padding: 0;
         margin: 0;
+
     }
 
     .card img {
@@ -495,6 +497,7 @@ aside {
     .card-details {
         width: 100%;
         padding: 1.4em;
+
     }
 
     .card-details a {
@@ -506,3 +509,57 @@ aside {
     }
 }
 
+/* Breadcrumb Navigation Styles */
+.breadcrumbs {
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    margin: 0 auto;
+    justify-content: center
+}
+
+.breadcrumbs ul {
+    list-style-type: none;
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.breadcrumbs li {
+    color: #777; /* Subtle color for non-current items */
+}
+
+.breadcrumbs a {
+    text-decoration: none;
+    color: #007bff; /* Blue color for links */
+}
+
+.breadcrumbs span {
+    color: #777; /* Subtle color for separators */
+}
+
+/* Style for the current page (last item) */
+.breadcrumbs li:last-child {
+    font-weight: bold;
+    color: #333; /* Slightly darker color for the current item */
+}
+
+
+.card {
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    transition: transform 0.3s;
+}
+
+.card:hover img {
+    transform: scale(1.01);
+}

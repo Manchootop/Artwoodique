@@ -58,10 +58,10 @@ class Product(models.Model):
             MinValueValidator(PRICE_MIN_VALUE)
         ])
 
-    def current_price(self):
-        if self.sale and not self.sale.has_expired():
-            return self.price - (self.price * (self.sale.sale_percentage / 100))
-        return self.price
+    # def current_price(self):
+    #     if self.sale and not self.sale.has_expired():
+    #         return self.price - (self.price * (self.sale.sale_percentage / 100))
+    #     return self.price
 
     class Meta:
         db_table = 'product'
@@ -110,16 +110,16 @@ class ProductRating(TimeBaseModel):
         db_table = 'rating'
 
 
-class Sale(models.Model):
-    sale_date = models.DateField()
-    sale_percentage = models.DecimalField(max_digits=5, decimal_places=2)  # Percentage discount
-    product = models.ForeignKey(Product, on_delete=models.CASCADE)
-
-    def has_expired(self):
-        return self.sale_date < timezone.now().date()
-
-    def __str__(self):
-        return f"Sale on {self.sale_date}"
+# class Sale(models.Model):
+#     sale_date = models.DateField()
+#     sale_percentage = models.DecimalField(max_digits=5, decimal_places=2)  # Percentage discount
+#     product = models.ForeignKey(Product, on_delete=models.CASCADE)
+#
+#     def has_expired(self):
+#         return self.sale_date < timezone.now().date()
+#
+#     def __str__(self):
+#         return f"Sale on {self.sale_date}"
 
 
 class Subscriber(models.Model):

@@ -6,7 +6,7 @@ from django.views import generic as views
 from core.project import settings
 from core.main.filters import ProductFilter
 from .forms import NewsletterSignupForm
-from .models.shop_models import Product, ProductImage, ProductRating, Sale, Subscriber
+from .models.shop_models import Product, ProductImage, ProductRating, Subscriber
 
 
 class HomeView(views.TemplateView):
@@ -129,5 +129,9 @@ class ProductDetailsView(views.DetailView):
         return context
 
 
+class ContactsView(views.TemplateView):
+    template_name = 'contact.html'
+
+
 class FAQView(views.TemplateView):
-    template_name = 'own/faq.html'
+    template_name = 'faq.html'

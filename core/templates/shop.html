@@ -39,10 +39,6 @@
         <ul>
             <li><a href="{% url 'index' %}">Home</a></li>
             <li><span>/</span></li>
-            <li><a href="{% url 'shop' %}">Shop</a></li>
-            <li><span>/</span></li>
-            <li><a href="{% url 'catalog' %}">Catalog</a></li>
-            <li><span>/</span></li>
             <li style="font-size: 2rem">STORE</li>
         </ul>
     </nav>
@@ -54,7 +50,8 @@
                 <h2>Filter Options</h2>
 
                 <!-- Material Filter -->
-                <form meod="get">
+                <form method="GET">
+                    {% csrf_token %}
                     {{ filter.form.material.label_tag }}
                     {{ filter.form.material }}
 
