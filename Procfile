@@ -1,1 +1,1 @@
-web: gunicorn --chdir project core.core.wsgi
+web: gunicorn project core.core.wsgi
