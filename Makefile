@@ -35,3 +35,7 @@ p-venv:
 
 enter-venv:
 	.\venv\Scripts\Activate
+
+.PHONY: collectstatic
+collectstatic:
+	poetry run python -m core.manage collectstatic

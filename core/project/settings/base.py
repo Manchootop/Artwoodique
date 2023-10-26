@@ -1,3 +1,5 @@
+import os
+
 from core.project.settings import BASE_DIR
 # TODO
 
@@ -93,6 +95,8 @@ STATIC_URL = 'static/'
 STATICFILES_DIRS = [
     BASE_DIR / "core/static",
 ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 MEDIA_ROOT = BASE_DIR / 'mediafiles'
 MEDIA_URL = '/media/'
 CKEDITOR_UPLOAD_PATH = "uploads/"
