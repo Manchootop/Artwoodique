@@ -1,1 +1,1 @@
-web: gunicorn --pythonpath core.core.wsgi
+web: gunicorn --pythonpath Artwoodique core.core.wsgi
